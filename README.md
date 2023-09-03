@@ -37,7 +37,7 @@ douban:
     text1: 左上文本1，
     text2: 左上文本2
     text3: 左下文本
-    quote: 'This is my book quote，<color>这里可以加内容，也可以不使用</color>'
+    quote: '<p>This is my song quote，</p><color>这里可以加内容，也可以不使用</color>'
     background: https://imgs.zo1.top/cover/20230902/bgms.png
     dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
@@ -48,7 +48,7 @@ douban:
     text1: 左上文本1
     text2: 左上文本2
     text3: 左下文本
-    quote: 'This is my movie quote，<color>这里可以加内容，也可以不使用</color>'
+    quote: '<p>This is my song quote，</p><color>这里可以加内容，也可以不使用</color>'
     background: https://imgs.zo1.top/cover/20230902/bgms.png
     dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
@@ -59,7 +59,7 @@ douban:
     text1: 左上文本1
     text2: 左上文本2
     text3: 左下文本
-    quote: 'This is my game quote，<color>这里可以加内容，也可以不使用</color>'
+    quote: '<p>This is my song quote，</p><color>这里可以加内容，也可以不使用</color>'
     background: https://imgs.zo1.top/cover/20230902/bgms.png
     dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
@@ -70,7 +70,7 @@ douban:
     text1: 左上文本1
     text2: 左上文本2
     text3: 左下文本
-    quote: 'This is my song quote，<color>这里可以加内容，也可以不使用</color>'
+    quote: '<p>This is my song quote，</p><color>这里可以加内容，也可以不使用</color>'
     background: https://imgs.zo1.top/cover/20230902/bgms.png
     dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
