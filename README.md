@@ -1,17 +1,7 @@
-# hexo-douban
+# hexo-douban-eamo
 
 一个在 [Hexo](https://hexo.io) 页面中嵌入豆瓣个人主页的小插件.
 
-
-[![mouban status](https://uptime.mythsman.com/api/badge/9/uptime?labelPrefix=Mouban+)](https://uptime.mythsman.com/status/douban)
-[![minio status](https://uptime.mythsman.com/api/badge/19/uptime?labelPrefix=Minio+)](https://uptime.mythsman.com/status/douban)
-
-
-[![package version](https://badge.fury.io/js/hexo-douban.svg)](https://www.npmjs.com/package/hexo-douban)
-[![npm](https://img.shields.io/npm/dt/hexo-douban.svg)](https://www.npmjs.com/package/hexo-douban)
-[![GitHub license](https://img.shields.io/github/license/mythsman/hexo-douban.svg)](https://github.com/mythsman/hexo-douban/blob/master/LICENSE)
-
-[![NPM](https://nodei.co/npm/hexo-douban.png)](https://nodei.co/npm/hexo-douban/)
 
 # 说明
 本插件是在[mythsman](https://github.com/mythsman/hexo-douban)基础上进行的魔改，就是为了样式好看，当然魔改的插件目前只针对[Anzhiyu](https://github.com/anzhiyu-c/hexo-theme-anzhiyu)主题有效，其他主题未知！！！
@@ -22,10 +12,6 @@
 
 插件版权归原作者所有，这里的魔改只是为了学习。
 
-
-## 原理
-
-hexo-douban 目前升级到了 2.x 版本，将原先由插件客户端自行获取数据的逻辑抽到了一个隐藏的服务端中进行，以统一解决数据获取、数据缓存、风控对抗等问题，提高页面生成的成功率和效率。
 
 ## 安装
 
@@ -47,22 +33,46 @@ douban:
   book:
     path: books/index.html
     title: 'This is my book title'
+    classify: 书籍
+    text1: 左上文本1，
+    text2: 左上文本2
+    text3: 左下文本
     quote: 'This is my book quote，<color>这里可以加内容，也可以不使用</color>'
+    background: https://imgs.zo1.top/cover/20230902/bgms.png
+    dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
   movie:
     path: movies/index.html
     title: 'This is my movie title'
+    classify: 影视
+    text1: 左上文本1
+    text2: 左上文本2
+    text3: 左下文本
     quote: 'This is my movie quote，<color>这里可以加内容，也可以不使用</color>'
+    background: https://imgs.zo1.top/cover/20230902/bgms.png
+    dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
   game:
     path: games/index.html
     title: 'This is my game title'
+    classify: 游戏
+    text1: 左上文本1
+    text2: 左上文本2
+    text3: 左下文本
     quote: 'This is my game quote，<color>这里可以加内容，也可以不使用</color>'
+    background: https://imgs.zo1.top/cover/20230902/bgms.png
+    dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
   song:
     path: songs/index.html
     title: 'This is my song title'
+    classify: 音乐
+    text1: 左上文本1
+    text2: 左上文本2
+    text3: 左下文本
     quote: 'This is my song quote，<color>这里可以加内容，也可以不使用</color>'
+    background: https://imgs.zo1.top/cover/20230902/bgms.png
+    dblink: https://www.douban.com/search?cat=1001&q=%E6%9C%80%E6%96%B0%E4%B9%A6%E7%B1%8D
     option:
   timeout: 10000 
 ```
@@ -77,7 +87,13 @@ douban:
 - **quote**: 写在页面开头的一段话,支持html语法。
 - **timeout**: 爬取数据的超时时间，默认是 10000ms ,如果在使用时发现报了超时的错(ETIMEOUT)可以把这个数据设置的大一点。
 - **option**: 该页面额外的 Front-matter 配置，参考[Hexo 文档](https://hexo.io/docs/front-matter.html)。无特别需要，留空即可。
-- - **color**: color里面的内容可以自定义，如果觉得不需要，可以直接把<color>xxx</color>删除即可。
+- **color**: color里面的内容可以自定义，如果觉得不需要，可以直接把<color>xxx</color>删除即可。
+- **classify**: 定义左上角的分类。
+- **text1**: 左上角的第一行文本。
+- **text2**: 左上角的第二行文本
+- **text3**: 左下角的文本
+- **background**: 顶部封面背景
+- **dblink**: 右下角跳转链接
 
 如果只想显示某一个页面(比如movie)，那就把其他的配置项注释掉即可。
 
@@ -202,64 +218,6 @@ https://mouban.mythsman.com/guest/user_song?id={your_douban_id}&action=do
 https://mouban.mythsman.com/guest/user_song?id={your_douban_id}&action=collect
 ```
 
-## 他们在用
-
-下面列举了在不同 hexo 主题下使用插件后的渲染结果，仅供参考。
-
-如果您使用了本插件，也欢迎在 README.md 中提 PR 将您的网站添加进来，供后人参考。
-
-### [hexo-theme-butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
-
-* [七鳄の学习格 - 生在黑暗，行向光明ヾ(@^▽^@)ノ](https://blog.gmcj0816.top/books/)
-* [Ofra Serendipity](https://cmwlvip.github.io/movies/)
-* [冰糖盒子 - 冰糖的笔记本](https://cvki.cn/movies/)
-* [フサエ·キャンベル·木之下 - 天道酬勤功不唐捐](https://zipblog.top/movies/)
-* [个人生活感悟记录](https://www.ensoul.club/books/)
-* [week.wiki](https://week.wiki/movies/)
-* [CodeRain - 越努力，越幸运](https://code7rain.github.io/movies/)
-* [hangzl's Blog - 总之岁月漫长 然而值得等待](https://hangzl.xyz/movies/)
-* [Lmx0](https://www.lmx0.top/movies/)
-* [老胖叔 - JZ](https://laopangshu.top/movies/)
-* [来生拓己 オフィシャルサイト](https://kisugitakumi.net/movies/)
-* [果实o的博客 - 个人网站](https://www.shengshunyan.xyz/movies/)
-* [TFC的个人博客](https://iqdxa.github.io/movies/)
-* [吕小布の博客 - MindCons](https://mindcons.cn/booklist/)
-* [Darler Space - 极速翱翔](https://blog.darler.cn/movies/)
-* [Evergarden](https://evergarden.moe/books/)
-* [现实的延续](https://www.intelland.cn/movies/)
-* [Gallifrey的计算机学习日记 - 个人文章归档](https://gallifrey.asia/)
-
-### [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery)
-
-* [小法进阶](https://imouyang.com/books/)
-* [Peiqi Blog](https://jupeiqi.top/books/)
-
-### [hexo-theme-next](https://github.com/theme-next/hexo-theme-next)
-
-* [Lyz's Blog - Never Give Up](https://blog.home999.cc/books)
-* [Sitch's Blog](https://sitchzou.com/movies/)
-
-### [hexo-theme-stellar](https://github.com/xaoxuu/hexo-theme-stellar)
-
-* [是非题](https://www.shifeiti.com/about/movies/)
-* [MerryJingle](https://blog.pengfeima.cn/movies/)
-* [梅园小径](https://www.auntyang.cf/life/doubanmovies/)
-
-### [hexo-theme-volantis](https://github.com/volantis-x/hexo-theme-volantis)
-
-* [老梁有墨](https://www.laoliang.ink/book/)
-
-### [hexo-theme-pure](https://github.com/cofess/hexo-theme-pure)
-
-* [fyupeng](https://lhx.cool/movies/)
-
-### [hexo-theme-icarus](https://github.com/ppoffice/hexo-theme-icarus)
-
-* [There Hello](https://therehello.top/movies/)
-
-### [hexo-theme-fluid](https://github.com/fluid-dev/hexo-theme-fluid)
-
-* [Loststar's blog](https://blog.loststar.tech/movies)
 
 ## 免责声明
 
