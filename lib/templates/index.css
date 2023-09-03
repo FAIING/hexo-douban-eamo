@@ -195,8 +195,19 @@ img {
     border-radius: 4px 4px 0 0;
 }
 
-#article-container a {
-    color: rgb(48, 122, 246);
+#article-container p {
+    margin: auto;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+#article-container a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.tag-Link):not(.btn-anzhiyu):not( .no-text-decoration ) {
+    font-weight: 500;
+    border-bottom: none;
+    color: var(--anzhiyu-fontcolor);
+    padding: 0 0.2em;
+    text-decoration: none;
+    font-family: auto;
 }
 
 .hexo-douban-title a {
@@ -236,7 +247,7 @@ a {
 
 .author-content.author-content-item.doubanPage {
     height: 23rem;
-    background: url(https://imgs.zo1.top/cover/20230902/bgms.png) no-repeat top;
+    background: url(<%- background; %>) no-repeat top;
     background-size: cover;
     color: var(--anzhiyu-white);
     overflow: hidden;
@@ -251,14 +262,14 @@ a {
     top: 0;
     left: 0;
 }
+/* #aside-content {
+    display: none;
+} */
+/* @media screen and (min-width: 1200px){
 #aside-content {
     display: none;
 }
-@media screen and (min-width: 1200px){
-#aside-content {
-    display: none;
-}
-}
+} */
 #page h1.page-title {
     display: none;
 }
@@ -274,7 +285,7 @@ div#page {
     box-shadow: none !important;
     padding: 0 !important;
     background: transparent !important;
-    width: 100%;
+    /* width: 100%; */
 }
 
 [data-theme="dark"] div#page {
@@ -293,4 +304,5 @@ color {
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     animation: rainbow 5s linear infinite;
+    font-size: 15px;
 }
