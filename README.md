@@ -88,12 +88,12 @@ douban:
 - **timeout**: 爬取数据的超时时间，默认是 10000ms ,如果在使用时发现报了超时的错(ETIMEOUT)可以把这个数据设置的大一点。
 - **option**: 该页面额外的 Front-matter 配置，参考[Hexo 文档](https://hexo.io/docs/front-matter.html)。无特别需要，留空即可。
 - **color**: color里面的内容可以自定义，如果觉得不需要，可以直接把<color>xxx</color>删除即可。
-- **classify**: 定义左上角的分类。
-- **text1**: 左上角的第一行文本。
-- **text2**: 左上角的第二行文本
-- **text3**: 左下角的文本
+- **classify**: 定义封面左上角的分类。
+- **text1**: 封面左上角的第一行文本。
+- **text2**: 封面左上角的第二行文本
+- **text3**: 封面左下角的文本
 - **background**: 顶部封面背景
-- **dblink**: 右下角跳转链接
+- **dblink**: 封面右下角跳转链接
 
 如果只想显示某一个页面(比如movie)，那就把其他的配置项注释掉即可。
 

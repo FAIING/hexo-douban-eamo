@@ -1,4 +1,3 @@
-
 .hexo-douban-tabs {
     margin-bottom: 15px;
     margin-top: 15px;
@@ -10,8 +9,9 @@
 }
 
 .hexo-douban-tab-active {
-    background: #657b83;
+    background: #3b70fc;
     color: #fff !important;
+    border-radius: 4px;
 }
 
 .hexo-douban-item {
@@ -87,6 +87,13 @@
     justify-content: space-between;
 }
 
+.hexo-douban-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .hexo-douban-item {
     border-bottom: none !important;
     background: var(--anzhiyu-card-bg);
@@ -114,19 +121,6 @@
     height: 100%;
     top: 0 !important;
     padding: 10px 0 10px 10px;
-}
-
-#article-container a {
-    text-decoration: none;
-    border-bottom: 2px solid var(--anzhiyu-lighttext);
-    color: var(--anzhiyu-fontcolor);
-    font-weight: bold;
-    padding: 0 4px;
-    border-radius: 4px 4px 0 0;
-}
-
-#article-container a {
-    color: rgb(48, 122, 246);
 }
 
 .hexo-douban-item .hexo-douban-picture a {
@@ -186,22 +180,20 @@ img {
     white-space: nowrap;
 }
 
-#article-container a {
-    text-decoration: none;
-    border-bottom: 2px solid var(--anzhiyu-lighttext);
-    color: var(--anzhiyu-fontcolor);
-    font-weight: bold;
-    padding: 0 4px;
-    border-radius: 4px 4px 0 0;
-}
-
 #article-container p {
     margin: auto;
     line-height: 1.6;
     font-size: 15px;
 }
 
-#article-container a:not([data-fancybox="gallery"]):not(.headerlink):not(.cf-friends-link):not(.tag-Link):not(.btn-anzhiyu):not( .no-text-decoration ) {
+#page #article-container .hexo-douban-pagination .hexo-douban-button {
+    border-bottom: none;
+}
+#page #article-container .hexo-douban-tabs .hexo-douban-tab {
+    border-bottom: none;
+}
+
+.hexo-douban-tabs a {
     font-weight: 500;
     border-bottom: none;
     color: var(--anzhiyu-fontcolor);
@@ -209,7 +201,6 @@ img {
     text-decoration: none;
     font-family: auto;
 }
-
 .hexo-douban-title a {
     padding: 0 !important;
 }
