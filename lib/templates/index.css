@@ -1,6 +1,11 @@
 .hexo-douban-tabs {
     margin-bottom: 15px;
     margin-top: 15px;
+    border: var(--style-border-always);
+    background-color: var(--anzhiyu-secondbg);
+    color: var(--anzhiyu-secondtext);
+    border-radius: 8px;
+    padding: 5px;
 }
 
 .hexo-douban-tab {
@@ -188,6 +193,7 @@ img {
 
 #page #article-container .hexo-douban-pagination .hexo-douban-button {
     border-bottom: none;
+    padding: 4px 8px;
 }
 #page #article-container .hexo-douban-tabs .hexo-douban-tab {
     border-bottom: none;
